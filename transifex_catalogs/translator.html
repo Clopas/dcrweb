@@ -301,6 +301,7 @@
         elID("next_bt").innerText = "save & next";
         elID("next_bt").disabled = state.selectedKey === "";
         elID("translated_str").disabled = state.selectedKey === "";
+        elID("toggle_dir").disabled = state.selectedKey === "";
       }
 
       function jumpToSelectedList() {
@@ -420,6 +421,13 @@
         elID("load_files").hidden = true;
         elID("translation_ui").style.display = "grid";
       }
+
+      var currentDirection = 'rtl'; // Initial direction is RTL
+      function toggleTextDirection() {
+        currentDirection = (currentDirection === 'rtl') ? 'ltr' : 'rtl';
+        translated_str.setAttribute('dir', currentDirection);
+      }
+
     </script>
   </head>
 
@@ -486,6 +494,13 @@
             id="next_bt"
           >
             save & next
+          </button>
+          <button
+            onclick="toggleTextDirection()"
+            title="Toggle Direction"
+            id="toggle_dir"
+          >
+            Toggle Direction
           </button>
           <a
             id="export_translation_btn"
