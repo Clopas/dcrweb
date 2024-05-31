@@ -46,11 +46,6 @@
   name: OKX
   highlight: false
 -
-  url: "https://changelly.com/"
-  tags:
-  name: Changelly
-  highlight: false
--
   url: "https://www.bitladon.com/"
   tags:
     - fiat
@@ -143,4 +138,8 @@
   tags:
   name: Kucoin
   highlight: false
-  
+-
+  url: "https://www.mexc.com/exchange/DCR_USDT"
+  tags:
+  name: MEXC
+  highlight: false
